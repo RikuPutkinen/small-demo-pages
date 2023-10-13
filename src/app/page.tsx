@@ -3,13 +3,13 @@ import DemoLink from './components/demo-link'
 import pricingThumbnail from '../../public/pricing-img.png'
 import { StaticImageData } from 'next/image'
 
-interface demoDataObj {
+interface DemoDataObj {
   imageSrc: StaticImageData,
   linkURL: string,
   linkText: string
 }
 
-const demoData: demoDataObj[] = [
+const demoData: DemoDataObj[] = [
   {
     imageSrc: pricingThumbnail,
     linkURL: "/pricing",
