@@ -1,0 +1,43 @@
+.tier_container {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 2 / 5;
+  border: #172554 solid 2px;
+  padding: .5rem;
+}
+
+.pricing_container {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
+  grid-template-rows: repeat(3, max-content);
+  margin: 2rem;
+}
+
+.sub_toggle {
+  display: flex;
+  align-items: center;
+  border: #172554 2px solid;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+}
+
+.sub_input {
+    display: none;
+  }
+
+.sub_label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
+}
+
+.sub_input:checked + label {
+  background-color: #172554;
+}
