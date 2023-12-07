@@ -1,6 +1,6 @@
 import ShopCartObj from "../types/shop-cart-obj";
-import { addToCart, removeFromCart } from "../lib/cartMethods";
-import { euroFormat } from "../lib/formatters";
+import { addToCart, removeFromCart } from "../../lib/cartMethods";
+import { euroFormat } from "../../lib/formatters";
 import Icon from "@mdi/react";
 import { mdiPlus, mdiMinus, mdiDelete } from "@mdi/js";
 

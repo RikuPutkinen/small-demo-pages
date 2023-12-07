@@ -4,8 +4,8 @@ import { mdiCartPlus } from "@mdi/js";
 
 import ShopItemObj from "../types/shop-item-obj";
 import placeHolder from "../../../../public/placeholder_dark_400.png";
-import { addToCart } from "../lib/cartMethods";
-import { euroFormat } from "../lib/formatters";
+import { addToCart } from "../../lib/cartMethods";
+import { euroFormat } from "../../lib/formatters";
 
 export default function ShopItem({ props } : { props: ShopItemObj}){
   const { name, price } = props;
