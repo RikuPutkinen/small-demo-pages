@@ -49,7 +49,7 @@ export default function Page(){
 
   return (
     <>
-      <h1>Checkout</h1>
+      <h1 className="text-2xl p-6 pb-0">Checkout</h1>
       <div className="grid grid-cols-2 p-6">
         <div className="pr-3 border-r border-collapse border-neutral-600">
           <h2 className="mb-4 text-xl">Items</h2>
