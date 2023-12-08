@@ -3,8 +3,8 @@ import Image, { StaticImageData } from "next/image";
 
 export default function DemoLink({ imageSrc, linkURL, linkText } : { imageSrc: StaticImageData, linkURL: string, linkText: string }) {
   return (
-    <div className="border border-neutral-700 w-fit flex flex-col">
-      <Link href={linkURL} className="flex-grow flex justify-center items-center">
+    <div className="border border-neutral-700 w-fit flex flex-col min-w-[200px]">
+      <Link href={linkURL} className="flex-grow flex justify-center items-center min-h-[300px]">
         <Image
           src={imageSrc}
           width={400}
