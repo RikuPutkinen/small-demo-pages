@@ -53,31 +53,33 @@ export default function Page(){
       <div className="grid grid-cols-2 p-6">
         <div className="pr-3 border-r border-collapse border-neutral-600">
           <h2 className="mb-4 text-xl">Items</h2>
-          <table className="grid grid-cols-[2fr_1fr_1fr_1fr]">
-            <tr className="grid grid-cols-[subgrid] col-span-4 bg-neutral-800">
-              <th>Name</th>
-              <th>Price</th>
-              <th>Amount</th>
-              <th>Total</th>
-            </tr>
-            {cartItems.map(item => {
-              return (
-                <tr key={item.id} className="grid grid-cols-[subgrid] col-span-4">
-                  <td>{item.name}</td>
-                  <td className="text-right">{euroFormat.format(item.price)}</td>
-                  <td className="text-right">{item.amount}</td>
-                  <td className="text-right">{euroFormat.format(item.amount * item.price)}</td>
-                </tr>
-              )
-            })}
-            <tr className="bg-neutral-800 border-t grid grid-cols-[subgrid] col-span-4">
-              <td className="font-bold">Total:</td>
-              <td></td>
-              <td></td>
-              <td className="text-right font-bold">{euroFormat.format(totalPrice)}</td>
-            </tr>
-          </table>
-          <Link href="/shop" className="underline">Return to store</Link>
+          { cartItems.length === 0 ?
+            <p>Cart is empty.</p> :
+            <table className="grid grid-cols-[2fr_1fr_1fr_1fr]">
+              <tr className="grid grid-cols-[subgrid] col-span-4 bg-neutral-800">
+                <th>Name</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Total</th>
+              </tr>
+              {cartItems.map(item => {
+                return (
+                  <tr key={item.id} className="grid grid-cols-[subgrid] col-span-4">
+                    <td>{item.name}</td>
+                    <td className="text-right">{euroFormat.format(item.price)}</td>
+                    <td className="text-right">{item.amount}</td>
+                    <td className="text-right">{euroFormat.format(item.amount * item.price)}</td>
+                  </tr>
+                )
+              })}
+              <tr className="bg-neutral-800 border-t grid grid-cols-[subgrid] col-span-4">
+                <td className="font-bold">Total:</td>
+                <td></td>
+                <td></td>
+                <td className="text-right font-bold">{euroFormat.format(totalPrice)}</td>
+              </tr>
+            </table>}
+            <Link href="/shop" className="underline">Return to store</Link>
         </div>
         <div className="pl-3 border-l border-neutral-600 border-collapse">
           <h2 className="mb-4 text-xl">Shipping Information</h2>
