@@ -1,7 +1,7 @@
 "use client"
 
 import ShopItem from "./components/shop-item"
-import ShopItemObj from "./types/shop-item-obj"
+import ShopItemObj from "../types/shop-item-obj"
 import styles from "./shop.module.css"
 import { useState } from "react"
 import { CartView } from "./components/cart-view"

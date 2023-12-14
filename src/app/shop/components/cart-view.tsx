@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 import { mdiCart } from "@mdi/js"
 import Icon from "@mdi/react"
-import ShopCartObj from "../types/shop-cart-obj"
+import ShopCartObj from "../../types/shop-cart-obj"
 import { getCartItems, clearCart } from "../../lib/cartMethods"
 import { euroFormat } from "../../lib/formatters"
 import Link from "next/link"
