@@ -60,10 +60,8 @@ export default function Page() {
       <h1 className="text-4xl text-center m-10">Our plans</h1>
       <div className="flex flex-col items-center">
         <div className={styles.sub_toggle} onChange={handleChange}>
-          <input className={styles.sub_input} id="monthly" value="monthly" name="type" type="radio"  defaultChecked/>
-          <label className={styles.sub_label} htmlFor="monthly">Monthly</label>
-          <input className={styles.sub_input} id="yearly" value="yearly" name="type" type="radio"/>
-          <label className={styles.sub_label} htmlFor="yearly">Yearly</label>
+          <button onClick={() => setMonthly(true)} className={`flex justify-center items-center w-20 h-8 rounded-2xl mx-2 ${monthly ? "bg-blue-950" : ""}`}>Monthly</button>
+          <button onClick={() => setMonthly(false)} className={`flex justify-center items-center w-20 h-8 rounded-2xl mx-2 ${!monthly ? "bg-blue-950" : ""}`}>Yearly</button>
         </div>
       <div className={styles.pricing_container}>
         <TierContainer data={freeData} monthly={monthly} />
