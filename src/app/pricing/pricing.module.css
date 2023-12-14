@@ -23,21 +23,3 @@
   height: 3rem;
   border-radius: 1.5rem;
 }
-
-.sub_input {
-    display: none;
-  }
-
-.sub_label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 2rem;
-  border-radius: 1rem;
-  margin: 0 0.5rem;
-}
-
-.sub_input:checked + label {
-  background-color: #172554;
-}
